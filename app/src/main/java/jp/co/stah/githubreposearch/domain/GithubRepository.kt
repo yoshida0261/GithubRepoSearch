@@ -1,7 +1,7 @@
 package jp.co.stah.githubreposearch.domain
 
 class GithubRepository(
-    id: GithubREpositoryId,
+    id: GithubRepositoryId,
     val name: String,
     val image: String,
     private var star: Boolean
