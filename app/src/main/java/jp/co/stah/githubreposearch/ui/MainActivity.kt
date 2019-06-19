@@ -1,7 +1,8 @@
-package jp.co.stah.githubreposearch
+package jp.co.stah.githubreposearch.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import jp.co.stah.githubreposearch.R
 
 /*
 - 設計はAndroid Architecture Componentを使ったGoogleが推奨するアーキテクチャー。
