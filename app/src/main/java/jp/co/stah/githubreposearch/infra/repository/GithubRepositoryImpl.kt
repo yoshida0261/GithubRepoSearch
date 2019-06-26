@@ -8,11 +8,16 @@ import jp.co.stah.githubreposearch.domain.GithubRepositoryId
 import jp.co.stah.githubreposearch.domain.repository.GithubRepository
 
 class GithubRepositoryImpl : GithubRepository{
-    override fun findById(repositoryId: GithubRepositoryId): Maybe<GithubRepository> {
-        return apiClient.getRepositoty("").toMaybe().map{
-
+    override fun findById(repositoryId: GithubRepositoryId): Maybe<GithubRepository> =
+        // todo 検索ワード
+        apiClient.getRepositoty("").toMaybe().map{
+            GithubRepositoryConverter.convertToModel(it)
+        }.doOnSuccess{
+            println(it[0].name)
         }
+
     }
+
 
     /*
             todoApiClient.getTodo(todoId.value).toMaybe().map {
